@@ -7,7 +7,7 @@ jobs:
   scrape: 
     runs-on: ubuntu-latest
     steps:
-      - name: Check out this repo
+        - name: Check out this repo
       uses: actions/checkout@v2
       - name: Set up Python 
       uses: actions/setup-python@v2
