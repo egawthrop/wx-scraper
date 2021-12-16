@@ -1,7 +1,28 @@
 import pandas as pd
 import requests
 from bs4 import BeautifulSoup
+from datetime import datetime, timedelta
 
+
+yesterday = datetime.now() - timedelta(1)
+print("Yesterday's date:", yesterday)
+
+month = yesterday.strftime('%m')
+day = yesterday.strftime('%d')
+year = yesterday.strftime('%Y')
+month 
+day 
+year
+
+wx_url = f'https://www.wunderground.com/dashboard/pws/KININDIA334/graph/{year}-{month}-{day}/{year}-{month}-{day}/daily'
+
+wx = requests.get(wx_url)
+doc = BeautifulSoup(wx.text, 'html.parser')
+rain_list = doc.findAll('span', class_='test-false wu-unit wu-unit-rain ng-star-inserted')
+date = f'{month}:{day}:{year}'
+value = rain_list[2].text[:-4]
+
+rainfall
 
 month = ["07"]
 day = [*range(20, 24, 1)]
