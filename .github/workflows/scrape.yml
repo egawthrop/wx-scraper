@@ -14,9 +14,9 @@ jobs:
         with:
           python-version: '3.9'
       - name: Install the needed libraries
-        run: pip install requests beautifulsoup4 pandas
+        run: pip install requests beautifulsoup4 pandas datetime pathlib
       - name: Run our scraping script
-        run: python noblesville_rain_scrape.py
+        run: python indy_daily_scraper.py
       - name: Commit and push if content changed
         run: |-
           git config user.name "Automated"
