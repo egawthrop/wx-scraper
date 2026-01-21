@@ -14,7 +14,7 @@ day = yesterday.strftime('%d')
 year = yesterday.strftime('%Y')
 
 # define station ID
-station = 'KININDIA334'
+station = 'KININDIA550'
 
 # define and get URL, parse text and extract daily rainfall 
 wx_url = f'https://www.wunderground.com/dashboard/pws/{station}/graph/{year}-{month}-{day}/{year}-{month}-{day}/daily'
