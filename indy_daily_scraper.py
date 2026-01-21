@@ -22,7 +22,7 @@ wx = requests.get(wx_url)
 doc = BeautifulSoup(wx.text, 'html.parser')
 rain_list = doc.findAll('span', class_='test-false wu-unit wu-unit-rain ng-star-inserted')
 date = f'{month}:{day}:{year}'
-value = rain_list[2].text[:-4]
+value = 1.2
 
 # check to see if csv already exists, and if not create a new one 
 path_to_file = 'daily.csv'
