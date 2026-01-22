@@ -16,7 +16,7 @@ jobs:
       - name: Install the needed libraries
         run: pip install requests beautifulsoup4 pandas datetime pathlib
       - name: Debug - show script content
-        run: head -20 indy_daily_scraper.py
+        run: head -25 indy_daily_scraper.py
       - name: Run our scraping script
         run: python indy_daily_scraper.py
       - name: Commit and push if content changed
