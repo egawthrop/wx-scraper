@@ -38,7 +38,7 @@ else:
 
 # open csv, add new data 
 df = pd.read_csv('daily.csv')
-df2 = {'Station': station, 'Date': date, 'Rainfall': value}
+df2 = {'Station': station, 'Date': date, 'Rainfall': rain_value}
 #df = df.append(df2, ignore_index = True)
 df = pd.concat([df, pd.DataFrame([df2])], ignore_index=True)
 
