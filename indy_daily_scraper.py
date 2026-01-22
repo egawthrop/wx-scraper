@@ -41,7 +41,7 @@ the_path = Path(path_to_file)
 if the_path.is_file():
     print(f'The file {path_to_file} exists')
 else:
-    column_names = ["Station", "Date", "Rainfall"]
+    column_names = ["Station", "Today Date", "Data Date", "Rainfall"]
     df = pd.DataFrame(columns = column_names)
     df.to_csv('daily2.csv', index = False)
 
